@@ -12,7 +12,7 @@ const slideInVariants = {
 const FeatureGroup: React.FC = () => {
     return (
         <motion.section
-            className="space-y-6"
+            className="space-y-6 lg-w-full"
             initial="hidden"
             animate="visible"
             transition={{ staggerChildren: 0.8 }}

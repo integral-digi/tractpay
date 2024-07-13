@@ -20,26 +20,26 @@ const Partners = () => {
     <section className="w-full space-y-24 flex flex-col items-center justify-center">
       <section className="space-y-6 text-center">
         {partnersInfo.title && (
-          <h2 className="text-6xl font-extrabold text-gray-900 w-[90%]">
+          <h2 className="text-6xl font-extrabold text-slate-800 w-[90%] lg:text-3xl lg:w-full">
             {partnersInfo.title}
           </h2>
         )}
         {partnersInfo.subtitle && (
-          <p className="text-lg text-slate-500 font-medium">
+          <p className="text-lg text-slate-500 font-medium lg:text-base">
             {partnersInfo.subtitle}
           </p>
         )}
       </section>
-      <section className="flex gap-6 flex-wrap justify-center">
+      <section className="flex gap-6 flex-wrap justify-center lg:gap-4">
         {partnersInfo.brands.map((brand) => (
           <section
             key={brand.id}
-            className="w-[23%] px-12 h-40 bg-neutral-100 rounded-3xl flex items-center justify-center"
+            className="w-[23%] px-12 h-40 bg-neutral-100 rounded-3xl flex items-center justify-center lg:w-[40%] lg:px-2"
           >
             <img
               src={brand.logo}
               alt={brand.name}
-              className="h-12 w-auto"
+              className="h-12 w-auto lg:h-6"
             />
           </section>
         ))}

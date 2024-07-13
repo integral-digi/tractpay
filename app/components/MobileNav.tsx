@@ -1,28 +1,28 @@
 "use client"
 import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
+import { Popover, PopoverButton, PopoverPanel, Transition } from "@headlessui/react";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import MenuTray from "./MenuTray";
 import Image from "next/image";
 
 const MobileNav = () => {
     return (
-        <section className="hidden lg:block">
+        <section className="hidden lg:block pt-8">
             <section className="flex items-center justify-between w-full">
                 <section>
                     <Image
-                        src="/assets/logomark.svg" 
+                        src="/assets/logo.svg" 
                         alt="tractpay" 
                         width={132}
                         height={36}
                     />
                 </section>
                 <Popover data-popover-target="MenuTray">
-                    <Popover.Button>
+                    <PopoverButton>
                         <section>
-                            <Bars3Icon className="text-white w-6 h-6" />
+                            <Bars3Icon className="text-slate-800 w-6 h-6" />
                         </section>
-                    </Popover.Button>
+                    </PopoverButton>
                     <Transition
                         as={Fragment}
                         enter="transition ease-out duration-200"
@@ -31,9 +31,9 @@ const MobileNav = () => {
                         leave="transition ease-in duration-150"
                         leaveFrom="opacity-100 translate-y-0"
                         leaveTo="opacity-0 translate-y-1">
-                        <Popover.Panel id="MenuTray" className="top-0 left-0 w-full z-50 overflow-y-scroll fixed">
+                        <PopoverPanel id="MenuTray" className="top-0 left-0 w-full z-50 overflow-y-scroll fixed">
                             <MenuTray />
-                        </Popover.Panel>
+                        </PopoverPanel>
                     </Transition>
                 </Popover>
             </section>

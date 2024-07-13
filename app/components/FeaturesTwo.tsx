@@ -9,8 +9,8 @@ const features = {
 
 const FeaturesTwo =() => {
     return (
-        <section className="w-full bg-neutral-100 rounded-3xl">
-            <section className="flex items-center justify-between px-12 pt-12">
+        <section className="w-full bg-neutral-100 rounded-3xl overflow-clip">
+            <section className="flex items-center justify-between px-12 pt-12 lg:flex-col lg:space-y-8 lg:px-8 lg:pt-8">
                 <section className="space-y-8">
                     <Image
                         src={features.icon}
@@ -18,7 +18,7 @@ const FeaturesTwo =() => {
                         height={84}
                         alt="feature"
                     />
-                    <h2 className="text-5xl font-bold text-gray-900">
+                    <h2 className="text-5xl font-bold text-slate-800 lg:text-3xl">
                         {features.title}
                     </h2>
                     <p className="text-lg font-medium text-slate-500">

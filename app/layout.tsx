@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto_Flex } from "next/font/google";
+import { Outfit } from "next/font/google";
 import { ContentProvider } from "../app/context/ContentContext";
 import "./globals.css";
 
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Experience the convenience and efficiency of Tractpay today. Whether you're an individual looking to streamline personal finances or a business in need of a reliable payment solution",
 };
 
-const roboto = Roboto_Flex({ subsets: ['latin'] });
+const roboto = Outfit({ subsets: ['latin'] });
 
 export default function RootLayout({
     children,

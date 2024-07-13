@@ -57,12 +57,12 @@ const FooterMain: React.FC = () => {
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <section className="bg-neutral-900 rounded-3xl">
-        <div className="container mx-auto p-24 lg:px-8 space-y-20">
+        <section className="container mx-auto p-24 lg:w-full lg:px-8 lg:py-12 space-y-12">
           <motion.section
             className="rounded-full bg-indigo-500 p-8 w-fit"
             initial={{ scale: 0.5 }}
             animate={{ scale: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: "easeIn" }}
           >
             <Image
               src="/assets/envelope.svg"
@@ -71,17 +71,17 @@ const FooterMain: React.FC = () => {
               alt="envelope"
             />
           </motion.section>
-          <section className="w-full mb-12 flex items-start justify-between">
-            <section className="w-1/2 space-y-4">
-              <h4 className="font-bold text-white mb-4 text-6xl">
+          <section className="w-full mb-12 flex items-start justify-between lg:flex-col lg:space-y-6">
+            <section className="w-1/2 space-y-4 lg:w-full">
+              <h4 className="font-bold text-white mb-4 text-6xl lg:text-3xl">
                 {footerTexts.stayInTheLoop}
               </h4>
-              <p className="text-white/80 text-sm font-medium w-[70%]">
+              <p className="text-white/80 text-sm font-medium w-[70%] lg:w-full">
                 {footerTexts.mailingList}
               </p>
             </section>
-            <section className="w-1/2">
-              <form className="flex space-x-4 items-center w-full">
+            <section className="w-1/2 lg:w-full">
+              <form className="flex space-x-4 items-center w-full lg:flex-col lg:space-y-4">
                 <input
                   type="email"
                   placeholder="Enter your email here"
@@ -89,7 +89,7 @@ const FooterMain: React.FC = () => {
                 />
                 <button
                   type="submit"
-                  className="px-4 h-14 bg-indigo-500 text-white rounded-full hover:bg-indigo-600"
+                  className="px-4 h-14 bg-indigo-500 text-white rounded-full hover:bg-indigo-700 lg:w-full"
                 >
                   {footerTexts.subscribe}
                 </button>
@@ -100,7 +100,7 @@ const FooterMain: React.FC = () => {
             </section>
           </section>
           <hr className="border-gray-600 w-full" />
-          <section className="flex items-start justify-between">
+          <section className="flex items-start justify-between lg:flex-col lg:space-y-12">
             <section className="space-y-8">
               <Image
                 src={footerTexts.logo}
@@ -120,48 +120,48 @@ const FooterMain: React.FC = () => {
                 ))}
               </section>
             </section>
-            <div className="flex flex-wrap justify-between lg:flex-nowrap lg:space-x-12">
-              <div className="flex lg:flex-col space-x-24 lg:space-y-8">
-                <div>
+            <section className="flex flex-wrap justify-between lg:flex-col lg:space-y-12">
+              <section className="flex lg:flex-col space-x-24 lg:space-y-8 lg:space-x-0">
+                <section>
                   <h4 className="font-bold text-white mb-4">{footerTexts.quicklinks}</h4>
                   <ul className="space-y-2">
                     {footerTexts.quicklinkItems.map((item, index) => (
                       <li key={index}><a href={item.href} className="text-white text-base hover:text-cyan hover:underline">{item.text}</a></li>
                     ))}
                   </ul>
-                </div>
-                <div>
+                </section>
+                <section>
                   <h4 className="font-bold text-white mb-4">{footerTexts.company}</h4>
                   <ul className="space-y-2">
                     {footerTexts.companyItems.map((item, index) => (
                       <li key={index}><a href={item.href} className="text-white text-base hover:text-cyan hover:underline">{item.text}</a></li>
                     ))}
                   </ul>
-                </div>
-                <div>
+                </section>
+                <section>
                   <h4 className="font-bold text-white mb-4">{footerTexts.community}</h4>
                   <ul className="space-y-2">
                     {footerTexts.communityItems.map((item, index) => (
                       <li key={index}><a href={item.href} className="text-white text-base hover:text-cyan hover:underline">{item.text}</a></li>
                     ))}
                   </ul>
-                </div>
-              </div>
-            </div>
+                </section>
+              </section>
+            </section>
           </section>
-        </div>
+        </section>
       </section>
-      <section className="flex items-center justify-between">
-        <div className="text-slate-500 text-sm">
+      <section className="flex items-center justify-between lg:flex-col lg:space-y-6">
+        <section className="text-slate-500 text-sm">
           {footerTexts.footerNote}
-        </div>
+        </section>
         <section className="flex items-center space-x-4">
           {footerTexts.socials.map((social) => (
-            <div key={social.name} className={`w-12 h-12 flex items-center justify-center hover:bg-white rounded-xl lg:h-10 lg:w-10 ${social.name === "facebook" ? "bg-indigo-500" : "bg-neutral-100"}`}>
+            <section key={social.name} className={`w-12 h-12 flex items-center justify-center hover:bg-white rounded-xl lg:h-10 lg:w-10 ${social.name === "facebook" ? "bg-indigo-500" : "bg-neutral-100"}`}>
               <Link href={social.href} passHref>
                 <img className="w-4 h-4 lg:h-4 lg:w-4" src={social.icon} alt={social.name} />
               </Link>
-            </div>
+            </section>
           ))}
         </section>
       </section>

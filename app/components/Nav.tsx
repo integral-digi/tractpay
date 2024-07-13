@@ -42,19 +42,19 @@ const Nav: React.FC = () => {
                 {navChildren.map((child) => (
                     <section className="flex items-center space-x-20" key={child.id}>
                         <Link href={child.href}>
-                            <p className="text-base text-gray-900 font-medium">{child.name}</p>
+                            <p className="text-base text-slate-800 font-medium">{child.name}</p>
                         </Link>
                     </section>
                 ))}
             </section>
             <section className="flex space-x-16 items-center">
                 <Link href="#" target="_blank" passHref>
-                    <p className="text-gray-900 font-medium text-nowrap">
+                    <p className="text-slate-800 font-medium text-nowrap">
                         Download Now
                     </p>
                 </Link>
                 <button 
-                    className="flex items-center justify-center space-x-2 bg-indigo-500 rounded-full h-14 px-8" 
+                    className="flex items-center justify-center space-x-2 bg-indigo-500 rounded-full h-14 px-8 hover:bg-indigo-700" 
                     onClick={() => router.push("/login")}
                 >
                     <p className="whitespace-nowrap text-white font-medium">

@@ -35,10 +35,10 @@ const Hero: React.FC = () => {
       className='w-full'
       initial="hidden"
       animate="visible"
-      transition={{ staggerChildren: 0.8 }}
+      transition={{ staggerChildren: 0.5 }}
     >
-      <section className='flex items-center justify-between'>
-        <motion.section className='w-1/2 h-auto' variants={variants}>
+      <section className='flex items-center justify-between lg:flex-col-reverse lg:space-y-6'>
+        <motion.section className='w-1/2 h-auto lg:w-full' variants={variants}>
           <Image
             src={hero.image}
             width={816}
@@ -48,9 +48,9 @@ const Hero: React.FC = () => {
             className='animate-pulse'
           />
         </motion.section>
-        <section className='hero-content w-1/2 space-y-6'>
+        <section className='hero-content w-1/2 space-y-6 lg:w-full'>
           <motion.h1
-            className='hero-title font-extrabold text-6xl leading-snug text-gray-900'
+            className='hero-title font-extrabold text-6xl leading-snug text-slate-800 lg:text-3xl'
             variants={variants}
           >
             {hero.title}
@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
             variants={variants}
           >
             <button
-              className='sign-up-button bg-indigo-500 text-white px-6 h-14 rounded-full'
+              className='sign-up-button bg-indigo-500 text-white px-6 h-14 rounded-full hover:bg-blue-700'
               onClick={() => router.push(hero.buttons[0].href)}
             >
               {hero.buttons[0].name}
@@ -95,7 +95,7 @@ const Hero: React.FC = () => {
             ))}
           </motion.section>
           <motion.section
-            className='hero-additional-info mt-4 text-sm text-gray-600 w-1/2'
+            className='hero-additional-info mt-4 text-sm text-gray-600 w-1/2 lg:w-full'
             variants={variants}
           >
             <p className='text-sm font-medium'>

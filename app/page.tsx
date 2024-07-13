@@ -5,22 +5,26 @@ import Nav from "./components/Nav";
 import CTA from "./components/CTA";
 import FooterMain from "./components/FooterMain";
 import CookiePolicy from "./components/CookiePolicy";
+import MobileNav from "./components/MobileNav";
 
 const Home = () => {
   return (
-    <main className="bg-white text-gray-800">
-      <section className="space-y-48 px-16">
+    <main className="bg-white space-y-48">
+      <section className="space-y-48 px-16 lg:px-8">
         <section className="space-y-12">
           <Nav />
+          <MobileNav />
           <Hero />
         </section>
         <FeatureGroup />
         <Partners />
         <CTA />
-        <FooterMain />
       </section>
       <section className="sticky bottom-4">
         <CookiePolicy />
+      </section>
+      <section className="w-full px-16 lg:px-4">
+        <FooterMain />
       </section>
     </main>
   )
