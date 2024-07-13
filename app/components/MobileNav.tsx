@@ -11,8 +11,8 @@ const MobileNav = () => {
             <section className="flex items-center justify-between w-full">
                 <section>
                     <Image
-                        src="/assets/logo.svg" 
-                        alt="DollarFX" 
+                        src="/assets/logomark.svg" 
+                        alt="tractpay" 
                         width={132}
                         height={36}
                     />

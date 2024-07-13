@@ -3,13 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-interface NavChild {
+export interface NavChild {
     id: number;
     name: string;
     href: string;
 }
 
-interface ButtonInfo {
+export interface ButtonInfo {
     name: string;
 }
 
