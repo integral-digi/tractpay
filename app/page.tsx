@@ -4,6 +4,7 @@ import Partners from "./components/Partners";
 import Nav from "./components/Nav";
 import CTA from "./components/CTA";
 import FooterMain from "./components/FooterMain";
+import CookiePolicy from "./components/CookiePolicy";
 
 const Home = () => {
   return (
@@ -17,6 +18,9 @@ const Home = () => {
         <Partners />
         <CTA />
         <FooterMain />
+      </section>
+      <section className="sticky bottom-4">
+        <CookiePolicy />
       </section>
     </main>
   )
