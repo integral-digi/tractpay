@@ -13,7 +13,7 @@ const MenuTray = () => {
         { id: 2, name: "Company", href: "#" },
         { id: 3, name: "Pricing", href: "#" },
     ];
-    const buttonInfo: ButtonInfo =  { name: "Agent Login", href: "#" };
+    const buttonInfo: ButtonInfo =  { name: "Agent Login" };
 
     return (
         <section className="space-y-8 bg-neutral-100 w-full h-full min-h-screen z-50 pb-96">
