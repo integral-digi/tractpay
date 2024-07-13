@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
   return (
     <motion.section className='w-full'>
       <section className='flex items-center justify-between'>
-        <section className='hero-image w-1/2 relative h-64 md:h-auto'>
+        <section className='w-1/2 h-auto'>
           <Image
             src={hero.image}
             width={816}
@@ -37,11 +37,11 @@ const Hero: React.FC = () => {
             loading="eager"
           />
         </section>
-        <section className='hero-content w-1/2 p-6 space-y-6'>
-          <h1 className='hero-title font-extrabold text-4xl md:text-7xl text-gray-900'>
+        <section className='hero-content w-1/2 space-y-6'>
+          <h1 className='hero-title font-extrabold text-6xl leading-snug text-gray-900'>
             {hero.title}
           </h1>
-          <p className='hero-subtitle text-lg font-medium'>
+          <p className='hero-subtitle text-lg font-medium text-slate-500'>
             {hero.subtitle}
           </p>
           <section className='hero-buttons flex space-x-4'>
@@ -58,12 +58,12 @@ const Hero: React.FC = () => {
               {hero.buttons[1].name}
             </button>
           </section>
-          <section className='hero-avatars mt-6 flex -space-x-2'>
+          <section className='hero-avatars mt-16 flex -space-x-2'>
             {hero.additionalInfo.avatars.map((avatar, index) => (
               <Image 
                 src={avatar.source}
-                width={24}
-                height={24}
+                width={32}
+                height={32}
                 alt={avatar.name}
                 key={index}
                 loading="lazy"
@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
               />
             ))}
           </section>
-          <section className='hero-additional-info mt-4 text-sm md:text-base text-gray-600 w-1/2'>
+          <section className='hero-additional-info mt-4 text-sm text-gray-600 w-1/2'>
             <p className='text-sm font-medium'>
               {hero.additionalInfo.subtitle}
             </p>
