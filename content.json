@@ -16,5 +16,6 @@
             { "name": "Open Account", "href": "/sign-up" },
             { "name": "Login", "href": "/login" }
         ]
-    }
+    },
+    "subscribe": { "title": "", "placeholder": "Enter your email address here", "buttonText": "subscribe", "apiKey": "", "apiUrl": "" }
 }
