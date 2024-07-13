@@ -20,11 +20,11 @@ const Home = () => {
         <Partners />
         <CTA />
       </section>
-      <section className="sticky bottom-4">
-        <CookiePolicy />
-      </section>
       <section className="w-full px-16 lg:px-4">
         <FooterMain />
+      </section>
+      <section className="sticky bottom-4">
+        <CookiePolicy />
       </section>
     </main>
   )
