@@ -33,7 +33,7 @@ const CookiePolicy = () => {
                                 Our website cookies help give you a better web experience and keep everything working nicely. You can accept them all below or choose which ones to keep. Find out more in our Cookie Policy.
                             </p>
                             <section className="flex justify-between items-center">
-                                <button className="bg-indigo-500 h-12 px-4 rounded-full items-center flex justify-center" onClick={handleAccept}>
+                                <button className="bg-indigo-500 hover:bg-indigo-700 h-12 px-4 rounded-full items-center flex justify-center" onClick={handleAccept}>
                                     <p className="font-bold text-white">
                                         Accept Cookies
                                     </p>
