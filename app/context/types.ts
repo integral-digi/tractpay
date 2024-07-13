@@ -36,4 +36,5 @@ export interface Content {
       buttons: Button[];
   };
   features: Card[];
+  subscribe?: { title: string, placeholder: string, buttonText: string, apiKey: string, apiUrl: string };
 }
