@@ -1,0 +1,20 @@
+{
+    "hero": {
+        "image": "/images/hero.png",
+        "title": "Simplifying Your Financial Transactions",
+        "subtitle": "Innovative payment platform designed to streamline all your financial transactions. Whether you need to make payments, transfer funds, or collect fees, Tractpay offers a seamless and efficient solution.",
+        "additionalInfo": {
+            "subtitle": "tested and trusted by thousands of satisfied users who rely on tractpay for their day to day payments",
+            "avatars": [
+                { "name": "avatarone", "source": "/images/user.png" },
+                { "name": "avatartwo", "source": "/images/user.png" },
+                { "name": "avatarthree", "source": "/images/user.png" },
+                { "name": "avatarfour", "source": "/images/user.png" }
+            ]
+        },
+        "buttons": [
+            { "name": "Open Account", "href": "/sign-up" },
+            { "name": "Login", "href": "/login" }
+        ]
+    }
+}
