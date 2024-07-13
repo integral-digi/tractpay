@@ -157,7 +157,7 @@ const FooterMain: React.FC = () => {
         </section>
         <section className="flex items-center space-x-4">
           {footerTexts.socials.map((social) => (
-            <section key={social.name} className={`w-12 h-12 flex items-center justify-center hover:bg-white rounded-xl lg:h-10 lg:w-10 ${social.name === "facebook" ? "bg-indigo-500" : "bg-neutral-100"}`}>
+            <section key={social.name} className={`w-12 h-12 flex items-center justify-center hover:bg-white rounded-xl lg:h-10 lg:w-10 ${social.name === "facebook" ? "bg-indigo-500 hover:bg-indigo-700" : "bg-neutral-100"}`}>
               <Link href={social.href} passHref>
                 <img className="w-4 h-4 lg:h-4 lg:w-4" src={social.icon} alt={social.name} />
               </Link>
