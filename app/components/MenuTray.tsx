@@ -13,7 +13,7 @@ const MenuTray = () => {
         { id: 2, name: "Company", href: "#" },
         { id: 3, name: "Pricing", href: "#" },
     ];
-    const buttonInfo: ButtonInfo =  { name: "Agent Login" };
+    const buttonInfo: ButtonInfo =  { name: "Agent Login", href: "#" };
 
     return (
         <section className="space-y-8 bg-neutral-100 w-full h-full min-h-screen z-50 pb-96">
@@ -49,13 +49,7 @@ const MenuTray = () => {
                     </motion.p>
                 ))}
                 <section className="space-y-12">
-                    <button className="flex items-center space-x-2" onClick={() => router.push("/secure-login")}>
-                        <Image 
-                            src={buttonInfo.icon} 
-                            alt="user icon" 
-                            width={24}
-                            height={24}
-                        />
+                    <button className="flex items-center space-x-2" onClick={() => router.push("/login")}>
                         <p className="whitespace-nowrap text-gray-900 font-medium">
                             {buttonInfo.name}
                         </p>
