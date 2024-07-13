@@ -11,7 +11,7 @@ const slideInVariants = {
 
 const FeatureGroup: React.FC = () => {
     return (
-        <section
+        <motion.section
             className="space-y-6"
             initial="hidden"
             animate="visible"
@@ -26,7 +26,7 @@ const FeatureGroup: React.FC = () => {
             <motion.div variants={slideInVariants}>
                 <FeaturesThree />
             </motion.div>
-        </section>
+        </motion.section>
     );
 }
 
