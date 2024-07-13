@@ -95,7 +95,7 @@ const FooterMain: React.FC = () => {
                 </button>
               </form>
               <p className="text-white/80 mt-4 text-sm">
-                By subscribing, you agree to our <Link href="#" className="underline hover:text-cyan">{footerTexts.privacyPolicy}</Link>.
+                By subscribing, you agree to our <Link href="#" className="underline text-base hover:text-cyan">{footerTexts.privacyPolicy}</Link>.
               </p>
             </section>
           </section>
@@ -113,7 +113,7 @@ const FooterMain: React.FC = () => {
                   <button
                     key={image.id}
                     onClick={() => router.push(image.href)}
-                    className="h-16 px-4 rounded-full bg-gray-700"
+                    className="h-16 px-4 rounded-full bg-gray-700 hover:bg-black"
                   >
                     <img src={image.img} className="w-auto h-8" alt={image.name} />
                   </button>
@@ -126,7 +126,7 @@ const FooterMain: React.FC = () => {
                   <h4 className="font-bold text-white mb-4">{footerTexts.quicklinks}</h4>
                   <ul className="space-y-2">
                     {footerTexts.quicklinkItems.map((item, index) => (
-                      <li key={index}><a href={item.href} className="text-white hover:text-cyan">{item.text}</a></li>
+                      <li key={index}><a href={item.href} className="text-white text-base hover:text-cyan hover:underline">{item.text}</a></li>
                     ))}
                   </ul>
                 </div>
@@ -134,7 +134,7 @@ const FooterMain: React.FC = () => {
                   <h4 className="font-bold text-white mb-4">{footerTexts.company}</h4>
                   <ul className="space-y-2">
                     {footerTexts.companyItems.map((item, index) => (
-                      <li key={index}><a href={item.href} className="text-white hover:text-cyan">{item.text}</a></li>
+                      <li key={index}><a href={item.href} className="text-white text-base hover:text-cyan hover:underline">{item.text}</a></li>
                     ))}
                   </ul>
                 </div>
@@ -142,7 +142,7 @@ const FooterMain: React.FC = () => {
                   <h4 className="font-bold text-white mb-4">{footerTexts.community}</h4>
                   <ul className="space-y-2">
                     {footerTexts.communityItems.map((item, index) => (
-                      <li key={index}><a href={item.href} className="text-white hover:text-cyan">{item.text}</a></li>
+                      <li key={index}><a href={item.href} className="text-white text-base hover:text-cyan hover:underline">{item.text}</a></li>
                     ))}
                   </ul>
                 </div>

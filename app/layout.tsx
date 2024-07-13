@@ -5,7 +5,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Tractpay | Simplifying your financial transactions",
-  description: "Clash Ultra Next JS Gaming Template",
+  description: "Experience the convenience and efficiency of Tractpay today. Whether you're an individual looking to streamline personal finances or a business in need of a reliable payment solution",
 };
 
 const roboto = Roboto_Flex({ subsets: ['latin'] });

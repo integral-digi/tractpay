@@ -30,7 +30,7 @@ const CTA = () => {
                             <button 
                                 key={image.id} 
                                 onClick={() => router.push(image.href)}
-                                className="h-16 px-4 rounded-full bg-gray-700"
+                                className="h-16 px-4 rounded-full bg-gray-700 hover:bg-black"
                             >
                                 <img src={image.img} className="w-auto h-8" alt={image.name} />
                             </button>

@@ -42,7 +42,7 @@ const Features = () => {
                 <p className="text-lg font-medium text-slate-500">
                   {feature?.subtitle}
                 </p>
-                <section className="mx-auto bottom-0 absolute">
+                <section className="mx-auto bottom-0 absolute -translate-x-3">
                   <Image
                     src={feature.image}
                     width={608}
