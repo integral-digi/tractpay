@@ -56,8 +56,8 @@ const Nav: React.FC<DarkProps> = ({ isDark, handleDark }) => {
             </section>
             <section className="flex space-x-16 items-center">
                 {
-                    isDark ? <MoonIcon className=" text-slate-800 dark:text-white w-4 h-4 cursor-pointer" onClick={handleDark} />
-                    : <SunIcon className="dark:text-white text-slate-800 w-5 h-5 cursor-pointer" onClick={handleDark} />
+                    isDark ? <SunIcon className=" text-slate-800 dark:text-white w-4 h-4 cursor-pointer" onClick={handleDark} />
+                    : <MoonIcon className="dark:text-white text-slate-800 w-5 h-5 cursor-pointer" onClick={handleDark} />
                 } 
                 <Link href="#" target="_blank" passHref>
                     <p className="text-slate-800 dark:text-white font-medium text-nowrap">

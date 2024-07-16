@@ -54,8 +54,8 @@ const MenuTray: React.FC<DarkProps> = ({isDark, handleDark}) => {
                 <section className="flex items-center space-x-8 justify-center">
                     <section>
                         {
-                            isDark ? <MoonIcon className=" text-slate-800 dark:text-white w-4 h-4 cursor-pointer" onClick={handleDark} />
-                            : <SunIcon className="dark:text-white text-slate-800 w-5 h-5 cursor-pointer" onClick={handleDark} />
+                            isDark ? <SunIcon className=" text-slate-800 dark:text-white w-4 h-4 cursor-pointer" onClick={handleDark} />
+                            : <MoonIcon className="dark:text-white text-slate-800 w-5 h-5 cursor-pointer" onClick={handleDark} />
                         } 
                     </section>
                     <button className="flex items-center bg-indigo-500 h-12 px-4 rounded-full" onClick={() => router.push("/login")}>
