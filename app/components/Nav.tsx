@@ -1,7 +1,9 @@
 "use client"
+import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export interface NavChild {
     id: number;
@@ -13,7 +15,12 @@ export interface ButtonInfo {
     name: string;
 }
 
-const Nav: React.FC = () => {
+export interface DarkProps {
+    isDark: boolean;
+    handleDark?: () => void;
+}
+
+const Nav: React.FC<DarkProps> = ({ isDark, handleDark }) => {
     const router = useRouter();
 
     const navChildren: NavChild[] = [
@@ -29,10 +36,10 @@ const Nav: React.FC = () => {
                 <section>
                     <Link href="/" passHref>
                         <Image
-                            src="/assets/logo.svg" 
+                            src={`${isDark ? "/assets/logomark.svg" : "/assets/logo.svg" }`}
                             alt="tractpay" 
-                            width={132}
-                            height={36}
+                            width={`${isDark ? 120 : 132 }`}
+                            height={`${isDark ? 24 : 36 }`}
                         />
                     </Link>
                 </section>
@@ -42,14 +49,18 @@ const Nav: React.FC = () => {
                 {navChildren.map((child) => (
                     <section className="flex items-center space-x-20" key={child.id}>
                         <Link href={child.href}>
-                            <p className="text-base text-slate-800 font-medium">{child.name}</p>
+                            <p className="text-base text-slate-800 dark:text-white font-medium">{child.name}</p>
                         </Link>
                     </section>
                 ))}
             </section>
             <section className="flex space-x-16 items-center">
+                {
+                    isDark ? <MoonIcon className=" text-slate-800 dark:text-white w-4 h-4 cursor-pointer" onClick={handleDark} />
+                    : <SunIcon className="dark:text-white text-slate-800 w-5 h-5 cursor-pointer" onClick={handleDark} />
+                } 
                 <Link href="#" target="_blank" passHref>
-                    <p className="text-slate-800 font-medium text-nowrap">
+                    <p className="text-slate-800 dark:text-white font-medium text-nowrap">
                         Download Now
                     </p>
                 </Link>

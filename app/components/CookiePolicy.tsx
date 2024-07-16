@@ -27,9 +27,9 @@ const CookiePolicy = () => {
         <>
             {
                 !click && (
-                    <section className="w-1/3 p-8 shadow-md rounded-lg bg-neutral-100 absolute bottom-8 left-4 lg:w-full">
+                    <section className="w-1/3 p-8 shadow-md rounded-lg bg-white dark:bg-slate-800 absolute bottom-8 left-4 lg:w-full lg:left-0">
                         <section className="space-y-8">
-                            <p className="text-base text-slate-500 font-medium">
+                            <p className="text-base text-slate-500 dark:text-white/80 font-medium">
                                 Our website cookies help give you a better web experience and keep everything working nicely. You can accept them all below or choose which ones to keep. Find out more in our Cookie Policy.
                             </p>
                             <section className="flex justify-between items-center">
@@ -38,8 +38,8 @@ const CookiePolicy = () => {
                                         Accept Cookies
                                     </p>
                                 </button>
-                                <button className="bg-white h-12 px-4 rounded-full items-center flex justify-center" onClick={handleDecline}>
-                                    <p className="font-bold text-slate-500">
+                                <button className="bg-white dark:bg-slate-900 h-12 px-4 rounded-full items-center flex justify-center" onClick={handleDecline}>
+                                    <p className="font-bold text-slate-500 dark:text-white/80">
                                         Decline
                                     </p>
                                 </button>

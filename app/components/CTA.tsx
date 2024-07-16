@@ -16,13 +16,13 @@ const CTA = () => {
     const router = useRouter();
 
     return (
-        <section className="w-full bg-neutral-100 rounded-3xl">
+        <section className="w-full bg-neutral-100 dark:bg-slate-800 rounded-3xl">
             <section className="flex flex-col justify-center items-center px-24 pt-32 space-y-20 lg:px-8 lg:pt-12">
                 <section className="space-y-12 text-center w-3/4 lg:w-full">
-                    <h2 className="text-6xl font-extrabold text-slate-800 lg:text-3xl">
+                    <h2 className="text-6xl font-extrabold text-slate-800 dark:text-white lg:text-3xl">
                         {ctaInfo.title}
                     </h2>
-                    <p className="text-lg font-medium text-slate-500 lg:text-base">
+                    <p className="text-lg font-medium text-slate-500 dark:text-white/80 lg:text-base">
                         {ctaInfo.subtitle}
                     </p>
                     <section className="flex space-x-6 items-center justify-center lg:space-x-4">

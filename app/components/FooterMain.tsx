@@ -43,7 +43,7 @@ const footerTexts = {
     { name: "github", href: "x.com", icon: "/assets/github.svg" },
     { name: "linkedin", href: "x.com", icon: "/assets/linkedin.svg" }
   ],
-  footerNote: "© 2023 Tractpay Inc. All rights reserved."
+  footerNote: "© 2024 Tractpay Inc. All rights reserved."
 };
 
 const FooterMain: React.FC = () => {
@@ -56,7 +56,7 @@ const FooterMain: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <section className="bg-neutral-900 rounded-3xl">
+      <section className="bg-neutral-900 dark:bg-slate-900 rounded-3xl">
         <section className="container mx-auto p-24 lg:w-full lg:px-8 lg:py-12 space-y-12">
           <motion.section
             className="rounded-full bg-indigo-500 p-8 w-fit"
@@ -152,12 +152,12 @@ const FooterMain: React.FC = () => {
         </section>
       </section>
       <section className="flex items-center justify-between lg:flex-col lg:space-y-6">
-        <section className="text-slate-500 text-sm">
+        <section className="text-slate-500 dark:text-white/80 text-sm">
           {footerTexts.footerNote}
         </section>
         <section className="flex items-center space-x-4">
           {footerTexts.socials.map((social) => (
-            <section key={social.name} className={`w-12 h-12 flex items-center justify-center hover:bg-cyan-400 rounded-xl lg:h-10 lg:w-10 ${social.name === "facebook" ? "bg-indigo-500" : "bg-neutral-100"}`}>
+            <section key={social.name} className={`w-12 h-12 flex items-center justify-center hover:bg-cyan-400 rounded-xl lg:h-10 lg:w-10 ${social.name === "facebook" ? "bg-indigo-500" : "bg-white dark:bg-neutral-100"}`}>
               <Link href={social.href} passHref>
                 <img className="w-4 h-4 lg:h-4 lg:w-4" src={social.icon} alt={social.name} />
               </Link>

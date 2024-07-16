@@ -4,11 +4,13 @@ const features = [
   {
     title: "Comprehensive Tracking",
     image: "/assets/featurefive.svg",
+    darkImage: "/assets/threedark.svg",
     icon: "/assets/track.svg"
   },
   {
     title: "Unmatched Security",
     image: "/assets/featurefour.svg",
+    darkImage: "/assets/fourdark.svg",
     icon: "/assets/security.svg"
   },
   {
@@ -17,7 +19,7 @@ const features = [
   }
 ];
 
-const FeaturesThree = () => {
+const FeaturesThree = ({ dark }:any) => {
   return (
     <section className="w-full">
       <section className="space-y-6">
@@ -26,7 +28,7 @@ const FeaturesThree = () => {
             <section
               key={index}
               className={`overflow-clip w-1/3 h-[460px] px-12 pt-12 lg:px-8 lg:pt-8 lg:w-full rounded-3xl relative ${
-                index === 2 ? "bg-black/80 text-white flex items-center justify-center cursor-pointer hover:bg-black" : "bg-neutral-100 text-slate-800"
+                index === 2 ? "bg-black/80 text-white flex items-center justify-center cursor-pointer hover:bg-black" : "bg-neutral-100 dark:bg-slate-800 text-slate-800 dark:text-white"
               }`}
             >
               <section className="space-y-8 w-full">
@@ -43,7 +45,7 @@ const FeaturesThree = () => {
                     </h2>
                     <section className="mx-auto w-full bottom-0 absolute">
                       <Image
-                        src={feature.image || "/assets/default.svg"}
+                        src={`${!dark ? feature.image : feature.darkImage}`}
                         width={400}
                         height={140}
                         alt="feature"

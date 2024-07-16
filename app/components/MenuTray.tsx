@@ -3,10 +3,12 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { PopoverButton } from "@headlessui/react";
-import { ButtonInfo, NavChild } from "./Nav";
-import { XMarkIcon } from "@heroicons/react/24/solid";
+import { ButtonInfo, DarkProps, NavChild } from "./Nav";
+import { MoonIcon, SunIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import React from "react";
+import Link from "next/link";
 
-const MenuTray = () => {
+const MenuTray: React.FC<DarkProps> = ({isDark, handleDark}) => {
     const router = useRouter();
     
     const navChildren: NavChild[] = [
@@ -17,26 +19,28 @@ const MenuTray = () => {
     const buttonInfo: ButtonInfo =  { name: "Agent Login" };
 
     return (
-        <section className="space-y-8 bg-white w-full h-full min-h-screen z-50 pb-96">
-            <section className="space-y-12 px-36 py-8 lg:px-8">
+        <section className="space-y-8 bg-white dark:bg-slate-900 w-full h-full min-h-screen z-50 pb-96">
+            <section className="space-y-12 px-36 py-12 lg:px-8">
                 <section className="flex items-center justify-between w-full">
                     <section>
-                        <Image
-                            src="/assets/logo.svg" 
-                            alt="tractpay logo" 
-                            width={132}
-                            height={36}                             
-                        />
+                        <Link href="/" passHref>
+                            <Image
+                                src={`${isDark ? "/assets/logomark.svg" : "/assets/logo.svg" }`}
+                                alt="tractpay" 
+                                width={`${isDark ? 120 : 132 }`}
+                                height={`${isDark ? 24 : 36 }`}
+                            />
+                        </Link>
                     </section>
                     <section>
                         <PopoverButton>
-                            <XMarkIcon className="text-slate-800 w-6 h-6 cursor-pointer" />
+                            <XMarkIcon className="text-slate-800 dark:text-white w-6 h-6 cursor-pointer" />
                         </PopoverButton>
                     </section>
                 </section>
                 {navChildren.map((item: any, index: number) => (
                     <motion.p 
-                        className="text-lg text-slate-800 font-bold cursor-pointer" 
+                        className="text-lg text-slate-800 dark:text-white font-bold cursor-pointer" 
                         key={index} 
                         onClick={() => router.push(item.href)}
                         initial={{ opacity: 0 }}
@@ -47,7 +51,13 @@ const MenuTray = () => {
                         {item.name.toUpperCase()}
                     </motion.p>
                 ))}
-                <section className="space-y-12 flex justify-center">
+                <section className="flex items-center space-x-8 justify-center">
+                    <section>
+                        {
+                            isDark ? <MoonIcon className=" text-slate-800 dark:text-white w-4 h-4 cursor-pointer" onClick={handleDark} />
+                            : <SunIcon className="dark:text-white text-slate-800 w-5 h-5 cursor-pointer" onClick={handleDark} />
+                        } 
+                    </section>
                     <button className="flex items-center bg-indigo-500 h-12 px-4 rounded-full" onClick={() => router.push("/login")}>
                         <p className="whitespace-nowrap text-white font-medium">
                             {buttonInfo.name}
