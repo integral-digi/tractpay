@@ -25,7 +25,7 @@ const Features = ({ dark }: any) => {
   return (
     <section className="w-full">
       <section className="space-y-16 flex flex-col justify-center items-center">
-        <h2 className="text-5xl text-center font-extrabold text-slate-800 dark:text-white w-3/4 lg:w-full lg:text-3xl">
+        <h2 className="text-5xl text-center font-extrabold text-slate-800 dark:text-white w-[70%] lg:w-full lg:text-3xl">
           {featureTexts.title}
         </h2>
         <section className="flex items-center space-x-6 w-full lg:flex-col lg:space-y-6 lg:space-x-0">
